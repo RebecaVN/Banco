@@ -1,24 +1,22 @@
 package banco;
 
 //(Classe objeto) - Super Classe//
-//A classe objeto não pode ser instanciada. 
-
 
 public abstract class Conta {
 	
 	private int agencia;
 	private int numero;
 	private double saldo;
-	Cadastro cliente;
+	private String cliente;
 	
 	//Construtor
 	
-	public Conta (int agencia, int numero, double saldo){
+	public Conta (int agencia, int numero, double saldo, String cliente){
 		
 		this.agencia = agencia;
 		this.numero = numero;
 		this.saldo = saldo;
-	
+		this.cliente = cliente;	
 	}
 
 	public int getAgencia() {
@@ -43,6 +41,14 @@ public abstract class Conta {
 
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
+	}
+
+	public String getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(String cliente) {
+		this.cliente = cliente;
 	}
 	
 	//Método depósito.
